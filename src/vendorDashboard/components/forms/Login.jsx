@@ -22,7 +22,7 @@ const Login = ({showWelcomeHandler}) => {
       setEmail("");
       setPassword("");
       localStorage.setItem('loginToken', data.token);
-      // showWelcomeHandler()
+      //showWelcomeHandler()
     }
   
     const vendorId = data.vendorId
@@ -35,11 +35,17 @@ const Login = ({showWelcomeHandler}) => {
       localStorage.setItem('firmId', vendorFirmId);
       localStorage.setItem('firmName', vendorFirmName)
       window.location.reload()
-    } else {
+    }  
+    
+    else {
       SetErrorEvent(data.error)
+      alert("login fail")
     }
+    
   } catch  (error) {  
-     alert("login fail")
+    console.error("Error during login:", error)
+    
+     //alert("login fail")
     }
   }
   return (
