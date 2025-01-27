@@ -44,7 +44,7 @@ const Register = ({showLoginHandler}) => {
         <label> Email </label> 
         <input type = "text" name= 'email' value={email}   onChange={(e) => setEmail(e.target.value)} placeholder= 'enter your email'/> <br/>
         <label>Password</label> 
-        <input type="password" name= 'password' value={password} onChange={(e) => setpassword(e.target.value)}  placeholder = 'enter your password'/> <br/>
+        <input type="password" name= 'password' value={password} onChange={(e) => setpassword(e.target.value)}  placeholder = 'enter your password' autocomplete = "current-password" /> <br/>
     <div className= "btnSubmit">
         <button type = "submit">Submit</button>
     </div>
